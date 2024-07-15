@@ -5,6 +5,10 @@
       "name": "Ahmed Ali"
     },
     {
+      "id": 6,
+      "name": "Ahmed Damasy"
+    },
+    {
       "id": 2,
       "name": "Aya Elsayed"
     },
@@ -75,6 +79,12 @@
       "customer_id": 5,
       "date": "2022-01-02",
       "amount": 875
+    },
+    {
+      "id": 10,
+      "customer_id": 6,
+      "date": "2024-01-02",
+      "amount": 800
     }
   ]
 }
