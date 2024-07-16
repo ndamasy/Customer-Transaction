@@ -3,29 +3,30 @@
 //fetch json file
 
 fetch('data.json').then(function (response) {
-    return response.json
+    return response.json();
 }).then(function (obj) {
-    console.log(obj)
+    displayCustomerData(obj);
 }).catch(function (err) {
     console.error(err)
 })
 
+const table = document.querySelector('.table-body-data')
 function displayCustomerData(customerData) {
-    var customerInfo = '';
-    if (allMealsImg.meals && allMealsImg.meals.length > 0) {
-        for (let i = 0; i < allMealsImg.meals.length; i++) {
-            cartona += `
-                    <div class="col-lg-3">
-                    <div class="home-photo" data-id="${allMealsImg.meals[i].idMeal}">
-                    <img src="${allMealsImg.meals[i].strMealThumb}" class="w-100" >
-                   <div class="overlay">
-                    <h2>${allMealsImg.meals[i].strMeal}</h2>
-                     </div>
-                     </div>
-                         </div>
+    var customerTableData = '';
+    if (customerData &&  customerData.customers.length > 0 &&  customerData.transactions.length > 0) {
+        for (let i = 0; i < customerData.customers.length; i++) {
+             customerTableData += `
+            
+              <tr>
+                <th scope="row">${customerData.customers[i].id}</th>
+                <td>${customerData.customers[i].name}</td>
+                <td>${customerData.transactions[i].amount}</td>
+              </tr>
+            
                     `
         }
     }
 
-    homeAllMealsPhoto.innerHTML = cartona;
-}
+          table.innerHTML =customerTableData ;
+    
+};
