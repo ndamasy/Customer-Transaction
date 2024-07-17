@@ -19,16 +19,17 @@
     <!-- 2.filter data -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">Customer Data</a>
+        <a class="navbar-brand fs-2 fw-bold p-3" href="#">Customer Data</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse " id="navbarSupportedContent">
          
-          <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Filter" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Filter</button>
+          <form class="d-flex ps-5 filter-name w-75" role="search">
+            <input class="form-control me-2" type="search" placeholder="Filter by name" aria-label="Search">
+            
           </form>
+         
         </div>
       </div>
     </nav>
@@ -46,9 +47,11 @@
           <table class="table">
             <thead>
               <tr>
-                <th scope="col">Id</th>
+                <th scope="col">Customer Id</th>
                 <th scope="col">Customer Name</th>
-                <th scope="col">Customer transaction</th>
+                <th scope="col">Transaction Id</th>
+                <th scope="col">Transaction Date</th>
+                <th scope="col">Transaction Amount</th>
               </tr>
             </thead>
             <tbody class="table-body-data">
