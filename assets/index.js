@@ -3,16 +3,17 @@
 // //fetch json file
 var customerData = [];
 fetch('data.json')
-    .then(function (response) {
-        return response.json();
-    })
-    .then(function (result) {
-        const finalDataToUse = dataPreparation(result);
-        displayCustomerData(finalDataToUse);
-    })
-    .catch(function (error) {
-        console.error('Error fetching data:', error);
-    });
+   .then(function (response) {
+      return response.json();
+   })
+   .then(function (result) {
+      const finalDataToUse = dataPreparation(result);
+      displayCustomerData(finalDataToUse);
+      creatChart(finalDataToUse, 'bar');
+   })
+   .catch(function (error) {
+      console.error('Error fetching data:', error);
+   });
 
 function dataPreparation(obj) {
 
