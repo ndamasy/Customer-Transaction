@@ -20,24 +20,22 @@
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
         <a class="navbar-brand fs-2 fw-bold p-3" href="#">Customer Data</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse " id="navbarSupportedContent">
-         
+
           <form class="d-flex ps-5 filter-name w-75" role="search">
             <input class="form-control me-2" type="search" placeholder="Filter by name" aria-label="Search">
-            
+
           </form>
-         
+
         </div>
       </div>
     </nav>
 
-    <br />
-    <!-- 3.chart start -->
 
-    <!-- chart end -->
     <br />
 
     <!-- 1.customer table -->
@@ -55,18 +53,35 @@
               </tr>
             </thead>
             <tbody class="table-body-data">
-           
-           
+
+
             </tbody>
           </table>
         </div>
       </div>
     </div>
   </main>
+  <br />
+  <!-- 3.chart start -->
+<center>
+  <div class="chart">
+    <div class="chart_types">
+      <button onclick="setChartType('bar')">Bars</button>
+      <button onclick="setChartType('line')">Line</button>
+      <button onclick="setChartType('doughnut')">Doughnut</button>
+      <button onclick="setChartType('polarArea')">PolarArea</button>
+      <button onclick="setChartType('radar')">Radar</button>
+    </div>
+    <canvas id="myChart"></canvas>
+  </div>
+</center>
 
 
 
+  <!-- chart end -->
 
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="./assets/bootstrap.bundle.min.js"></script>
   <script src="./assets/index.js"></script>
 </body>
